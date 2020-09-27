@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "description": "",
   "author": "Matheus Alves (@theuves)",
-  "dependencies": {
+  "devDependencies": {
     "serverless-dotenv-plugin": "^3.0.0"
+    "serverless-ignore": "^0.1.5"
   }
 }

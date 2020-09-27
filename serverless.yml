@@ -2,6 +2,7 @@ service: ecs-desired-count
 
 plugins:
   - serverless-dotenv-plugin
+  - serverless-ignore
 
 provider:
   name: aws
