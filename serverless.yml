@@ -1,0 +1,29 @@
+service: ecs-desired-count-update
+
+plugins:
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: python3.8
+  memorySize: 128
+  stage: prod
+  region: us-east-1
+  environment:
+    CLUSTER: ${env:CLUSTER}
+    SERVICE: ${env:SERVICE}
+    COUNT_ORDER: ${env:COUNT_ORDER}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ecs:*"
+      Resource:
+        - "*"
+
+functions:
+  handler:
+    handler: main.handler
+
+custom:
+  pythonRequirements:
+    dockerizePip: false

@@ -1,0 +1,10 @@
+{
+  "name": "ecs-desired-count-update",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "author": "Matheus Alves (@theuves)",
+  "dependencies": {
+    "serverless-dotenv-plugin": "^3.0.0"
+  }
+}
