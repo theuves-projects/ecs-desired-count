@@ -12,7 +12,7 @@ cd ecs-desired-count
 npm install
 ```
 
-## Settings
+## Configuration
 
 Create a `.env` file with the following environment variables:
 
