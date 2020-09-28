@@ -1,5 +1,5 @@
 {
-  "name": "ecs-desired-count-update",
+  "name": "ecs-desired-count",
   "private": true,
   "version": "0.0.0",
   "description": "",
