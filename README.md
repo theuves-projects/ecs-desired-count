@@ -1,6 +1,6 @@
 # ecs-desired-count
 
-[Status](https://github.com/theuves/ecs-desired-count/workflows/Test/badge.svg)
+![Status](https://github.com/theuves/ecs-desired-count/workflows/Test/badge.svg)
 
 > AWS Lambda to update the 'desired count' of a ECS service.
 
