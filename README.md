@@ -6,6 +6,8 @@
 
 ## Installation
 
+Clone the repository and install the Serverless plugins.
+
 ```bash
 git clone https://github.com/theuves/ecs-desired-count.git
 cd ecs-desired-count
