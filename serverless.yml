@@ -2,7 +2,6 @@ service: ecs-desired-count
 
 plugins:
   - serverless-dotenv-plugin
-  - serverless-ignore
 
 provider:
   name: aws
@@ -10,16 +9,19 @@ provider:
   memorySize: 128
   stage: prod
   region: ${env:REGION}
-  environment:
-    CLUSTER: ${env:CLUSTER}
-    SERVICE: ${env:SERVICE}
-    COUNT_ORDER: ${env:COUNT_ORDER}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
         - "ecs:*"
       Resource:
         - "*"
+
+package:
+  exclude:
+    - ./**
+  include:
+    - ecs.py
+    - main.py
 
 functions:
   handler:
