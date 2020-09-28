@@ -4,8 +4,8 @@ import ecs
 
 def handler(event, context):
     try:
-        cluster = os.environ.get("CLUSTER")
-        service = os.environ.get("SERVICE")
+        cluster = os.environ.get("ECS_CLUSTER")
+        service = os.environ.get("ECS_SERVICE")
         count_order = os.environ.get("COUNT_ORDER")
 
         count_list = count_order.split(",")
