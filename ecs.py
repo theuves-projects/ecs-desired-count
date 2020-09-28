@@ -1,7 +1,5 @@
 import boto3
 
-ecs = boto3.client("ecs")
-
 def get_next_count(count_order, current_count):
     try:
         index = count_order.index(str(current_count))
@@ -12,6 +10,7 @@ def get_next_count(count_order, current_count):
     return next
 
 def get_desired_count(cluster, service):
+    ecs = boto3.client("ecs")
     description = ecs.describe_services(cluster=cluster, services=[service])
     services = description.get("services")
 
@@ -22,4 +21,5 @@ def get_desired_count(cluster, service):
     return desired_count
 
 def set_desired_count(cluster, service, count):
+    ecs = boto3.client("ecs")
     return ecs.update_service(cluster=cluster, service=service, desiredCount=count)
