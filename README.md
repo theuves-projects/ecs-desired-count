@@ -2,7 +2,7 @@
 
 ![Status](https://github.com/theuves/ecs-desired-count/workflows/Test/badge.svg)
 
-> AWS Lambda to update the 'desired count' of a ECS service.
+> AWS Lambda to update the 'desired count' of an ECS service.
 
 ## Installation
 
@@ -33,7 +33,7 @@ If the value of `COUNT_ORDER` is `2,4,6` and the current desired count is 2 then
 serverless deploy
 ```
 
-Use `serverless remove` to remove Serverless service.
+Use the `serverless remove` command to remove Serverless service.
 
 ## Requirements
 
